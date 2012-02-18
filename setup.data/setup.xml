@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<install
+    product="nwn"
+    desc="Neverwinter Nights"
+    version="1.29-multilanguage-3"
+    binarypath="/usr/local/bin"
+    category="Game"
+    promptbinaries="yes"
+    express="no"
+    superuser="no"
+    reinstall="no"
+    reinstallnowarning="yes"
+    nopromptoverwrite="yes"
+    reinstallfast="yes"
+    splashpos="left"
+    nomenuitems="no"
+>
+
+  <require command="sh setup.data/tmp_check.sh 923">
+	 There is not enough free diskspace in your TMPDIR 
+  	 You need about: 923 MB
+  	 Try: export TMPDIR=/where/you/have/alot/of/freespace
+  </require>
+  
+  <cdrom id="disc1" name="Neverwinter Nights Disc 1">data2.cab</cdrom>
+  <cdrom id="disc2" name="Neverwinter Nights Disc 2">disk2.bzf</cdrom>
+  <cdrom id="disc3" name="Neverwinter Nights Disc 3">movies/ending.bik</cdrom> 
+  
+  <eula ignoreonreinstall="yes">EULA.txt</eula>
+
+  <readme>
+    README.liflg
+  </readme>
+
+  <option install="true" required="true" size="1910M">
+    Base Install
+
+    <binary arch="any" libc="any" binpath="bin/nwn" symlink="nwn" 
+          icon="nwn.xpm" name="Neverwinter Nights" desc="Neverwinter Nights" play="no">
+     nwn
+    </binary>
+ 
+    <binary arch="any" libc="any" binpath="bin/nwn_dm" symlink="nwn_dm" 
+	  icon="nwn_dm.xpm" name="Dungeon Master" desc="Dungeon Master" play="no">
+     nwn_dm
+    </binary>
+
+ <files cdromid="disc1" path="docs">
+   readme.txt
+  </files>
+
+  <script cdromid="disc1">
+   sh setup.data/install-disc1.sh
+  </script>
+
+  <!-- <files srcpath="DATA/nwm" path="nwm">
+   Chapter1.nwm
+   Chapter1E.nwm
+   Chapter2.nwm
+   Chapter2E.nwm
+   Chapter3.nwm
+   Chapter4.nwm
+   Prelude.nwm
+  </files> -->
+     
+  <script>
+   sh setup.data/changecase.sh
+  </script>
+  
+  <files srcpath="DATA/files2">
+   *
+  </files>
+
+   <files srcpath="DATA/files" path="data">
+   *.bif
+  </files>
+
+  <files srcpath="DATA/dmvault" path="dmvault">
+   dungeonmaster.bic
+  </files>
+
+  <files srcpath="DATA/localvault" path="localvault">
+   aluviandarkstar.bic
+   claymanorin.bic
+   daeris.bic
+   daevaorn.bic
+   diadanlocke.bic
+   drax.bic
+   freddifurpo.bic
+   frederickgarvin.bic
+   jaindvarkvasirso.bic
+   jinn.bic
+   jolenaleider.bic
+   junoboram.bic
+   kerith.bic
+   kheldaraambarhin.bic
+   laureencelest.bic
+   merrickdupelade.bic
+   ownka.bic
+   raptrethanlis.bic
+   torutaramoku.bic
+   xandraloxdeteste.bic
+   xavierwoo.bic
+   zanzinabru.bic  
+  </files>
+  
+  <files srcpath="DATA/texturepacks_32bit" path="texturepacks">
+   GUI_32bit.erf
+  </files>
+ 
+  <files srcpath="DATA/texturepacks_64bit_texture" path="texturepacks">
+   Textures_Tpa.erf 
+  </files>
+ 
+  <files srcpath="DATA/texturepacks_64bit_tile" path="texturepacks">
+   Tiles_Tpa.erf
+  </files>
+ 
+  <files srcpath="DATA/texturepacks_32bit_tile" path="texturepacks">
+   Tiles_Tpb.erf
+  </files>
+ 
+  <files srcpath="DATA/texturepacks_16m32b" path="texturepacks">
+   Textures_Tpc.erf
+   Tiles_Tpc.erf
+  </files>
+  
+  <script>
+   sh setup.data/clean-disc1.sh
+  </script>
+
+  <files cdromid="disc2">
+   nwn.ico
+  </files>
+
+  <script cdromid="disc2">
+   sh setup.data/install-disc2.sh
+  </script>
+  
+  <files>
+   data
+   logs
+   scripttemplates
+  </files>
+
+  <files cdromid="disc3">
+   data
+   music
+   movies
+   ambient
+  </files>
+ 
+  <files>
+   nwnclient_1.29.tar
+  </files>
+
+ </option>
+
+ <option install="no" required="no" size="156K">
+  BinkPlayer
+  <help>Needed to watch the movies</help>
+
+  <binary arch="any" libc="any" binpath="bin/BinkPlayer" play="no">
+   BinkPlayer
+  </binary>
+ 
+  </option>
+</install>

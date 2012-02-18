@@ -1,0 +1,48 @@
+
+			Neverwinter Nights: multilanguage version 1.29
+						(http://nwn.bioware.com/)
+
+========================================
+
+ABOUT
+=====
+
+	Neverwinter Nights (NWN) is a new Advanced Dungeons & Dragons (AD&D) roleplaying game from BioWare.
+	Neverwinter Nights has been designed specifically for the online, multiplayer environment
+	and the latest in 3D technology and also allows you to experience all the magic of pen-and-paper
+	Dungeon-Mastering on your home computer! As an all-powerful Dungeon Master (DM),
+	Neverwinter Nights even allows you to alter the plot, possess characters, and manage combat
+	from behind the scenes, all in real-time.
+	
+RUNNING THE GAME
+=============
+
+	run "nwn" or "nwn_dm" to play
+
+NOTES
+====
+
+	- Bink Video Player:
+		Use the enclosed beta version of the Bink player to play Bink files
+		or compiled Bink EXE files from the command line.
+		Useful for those who want to watch the NWN movies (*.bik) under Linux.
+    
+		for example: ./BinkPlayer movies/NWNIntro.bik
+
+	- You can set the keyboard to US layout for better
+          compatibility. Uncomment the line with USLAYOUT if
+          you want to use it.
+	  
+	- You are able to start the game on a second X server
+	  with the LIFLG start script. Uncomment the three
+	  variables (XSERVER, XSERVER_OPTIONS, XSERVER_DISPLAY)
+	  to activate it. The server will terminate if you leave
+	  the game.
+	
+TECHNICAL SUPPORT
+=============
+
+	Website: http://liflg.org/
+	Forum:   http://liflg.org/forum/
+
+The Loki Installers for Linux Gamers Team
